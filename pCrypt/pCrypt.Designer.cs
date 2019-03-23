@@ -63,7 +63,6 @@
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "Text String";
             this.textBox1.Click += new System.EventHandler(this.testBox1_Click);
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
