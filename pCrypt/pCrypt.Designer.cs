@@ -43,7 +43,6 @@
             this.label1.Size = new System.Drawing.Size(73, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Password:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -53,6 +52,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "GET PASSWORD";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -62,6 +62,7 @@
             this.textBox1.Size = new System.Drawing.Size(226, 22);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "Text String";
+            this.textBox1.Click += new System.EventHandler(this.testBox1_Click);
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
@@ -73,6 +74,7 @@
             this.textBox2.TabIndex = 3;
             this.textBox2.Text = "Secret Code";
             this.textBox2.UseSystemPasswordChar = true;
+            this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
             // 
             // label2
             // 
@@ -82,7 +84,6 @@
             this.label2.Size = new System.Drawing.Size(103, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "ENTER YOUR:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Form1
             // 

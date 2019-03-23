@@ -17,20 +17,7 @@ namespace TestApp
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            if (label1.Text.Equals("Password:"))
-            {
-                label1.Text = "LABEL BLACK";
-            }
-        }
-
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
         {
 
         }
@@ -38,6 +25,21 @@ namespace TestApp
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void testBox1_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+        }
+
+        private void textBox2_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = "";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            label1.Text = textBox1.Text + textBox2.Text;
         }
     }
 }
