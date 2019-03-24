@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">PCryptAndroid</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_text">Enter Text To Encode</string>
+    <string name="prompt_code">Enter Secret Code</string>
+    <string name="action_generate">Generate Password</string>
+    <string name="action_generate_short">Generate Password</string>
+    <string name="error_invalid_text">This text is invalid</string>
+    <string name="error_invalid_code">This code is too short</string>
+    <string name="error_incorrect_code">This code is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="give_password">"Your password is: %1$s"
+    </string>
+</resources>

@@ -37,48 +37,11 @@ namespace TestApp
         {
             String t1 = textBox1.Text;
             String t2 = textBox2.Text;
-            String pw = "";
-            for(int i = 0; i < Math.Min(t1.Length, t2.Length); i++)
-            {
-                if(i % 2 == 0)
-                {
-                    pw += t1[i];
-                }
-                else
-                {
-                    pw += t2[i];
-                }
-            }
-            String s = t2;
-            String t = t1;
-            if (t1.Length > t2.Length)
-            {
-                s = t1;
-                t = t2;
-            }
-            for (int i = t.Length; i < s.Length; i++)
-            {
-                pw += s[i];
-            }
-
+            String pw = t1 + t2;
             SHA256 sha256Hash = SHA256.Create();
             byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(pw));
-            StringBuilder builder = new StringBuilder();
-            for (int i = 0; i < bytes.Length; i++)
-            {
-                builder.Append(bytes[i].ToString("x2"));
-            }
-            label1.Text = builder.ToString().Substring(0, 12);
-            char[] a = label1.Text.ToCharArray();
-            for(int i = 0; i < a.Length; i++)
-            {
-                if((int)a[i] > 96 && (int)a[i] < 121)
-                {
-                    a[i] = (a[i].ToString().ToUpper()).ToCharArray()[0];
-                    break;
-                }
-            }
-            label1.Text = new String(a);
+            string t3 = System.Convert.ToBase64String(bytes);
+            label1.Text = t3.Substring(0, 12);
         }
     }
 }
