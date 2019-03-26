@@ -61,12 +61,14 @@ namespace TestApp
                 pw += s[i];
             }
 
+
+            // conversion algorithm
             SHA256 sha256Hash = SHA256.Create();
             byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(pw));
             StringBuilder builder = new StringBuilder();
             for (int i = 0; i < bytes.Length; i++)
             {
-                builder.Append(bytes[i].ToString("x2"));
+                builder.Append(Convert.ToString(((bytes[i] & 0xff) + 0x100), 16)[1]);
             }
             label1.Text = builder.ToString().Substring(0, 12);
             char[] a = label1.Text.ToCharArray();
